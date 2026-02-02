@@ -4,10 +4,10 @@
 
 ### Task 0: 依存関係のセットアップ
 
-- [ ] 必要なパッケージのインストール
+- [x] 必要なパッケージのインストール
   - `pnpm add unified remark-parse remark-rehype rehype-stringify gray-matter`
   - `pnpm add -D @tailwindcss/typography vitest`
-- [ ] `package.json` へのスクリプト追加
+- [x] `package.json` へのスクリプト追加
   - `"test": "vitest"`
   - `"lint": "biome check --write"`
 
@@ -18,8 +18,8 @@
 
 ### Task 1: Cloudflare R2 設定
 
-- [ ] `wrangler.jsonc` - R2バケットのバインディング設定追加 **(FR-01)**
-- [ ] `app/global.d.ts` - Cloudflare Bindingsの型定義追加
+- [x] `wrangler.jsonc` - R2バケットのバインディング設定追加 **(FR-01)**
+- [x] `app/global.d.ts` - Cloudflare Bindingsの型定義追加
 
 **依存関係**: なし
 **成果物**: WorkerからR2バケットにアクセス可能な環境

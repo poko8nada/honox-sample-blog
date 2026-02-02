@@ -8,7 +8,7 @@
   ],
   "assets": {
     "directory": "./dist"
-  }
+  },
   // "vars": {
   //   "MY_VAR": "my-variable"
   // },
@@ -18,12 +18,12 @@
   //     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   //   }
   // ],
-  // "r2_buckets": [
-  //   {
-  //     "binding": "MY_BUCKET",
-  //     "bucket_name": "my-bucket"
-  //   }
-  // ],
+  "r2_buckets": [
+    {
+      "binding": "BLOG_BUCKET",
+      "bucket_name": "honox-blog-bucket"
+    }
+  ],
   // "d1_databases": [
   //   {
   //     "binding": "MY_DB",
