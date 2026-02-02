@@ -24,12 +24,21 @@
 - **フロントエンド**: [Next.js / React / htmx / など]
 - **バックエンド**: [なし / Hono / Express / など]
 - **ホスティング**: [Vercel / Cloudflare Workers / Cloud Run / など]
-- **認証**: [なし / Clerk / Auth0 /　better auth / など]
+- **認証**: [なし / Clerk / Auth0 / better auth / など]
 - **状態管理**: [React Context / Zustand / nuqs / など]
 - **スタイリング/コンポーネント**: [Tailwind CSS / shadcn / react aria / など]
 - **テスト**: [Vitest / Testing Library / など]
 - **ORM+**: [なし / Drizzle ORM / Prisma / など]
 - **データベース**: [なし / D1 / Turso / Supabase / Neon /など]
+- **Lint/Formatter**: [Biome / ESLint + Prettier / など]
+- **パッケージマネージャ**: [pnpm / npm / yarn]
+- **主要スクリプト**:
+  - `dev`: [開発サーバー起動コマンド]
+  - `build`: [ビルドコマンド]
+  - `preview`: [ローカルプレビューコマンド]
+  - `deploy`: [デプロイコマンド]
+  - `test`: [テスト実行コマンド]
+  - `lint`: [Lint/フォーマット実行コマンド]
 - **その他**: [その他、使用する主要ライブラリ・API]
 
 ### PRODUCT v1(製品版)
