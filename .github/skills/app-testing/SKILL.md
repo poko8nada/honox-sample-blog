@@ -5,7 +5,11 @@ description: Minimal unit testing toolkit using Vitest for local web application
 
 # Application Testing
 
-Write minimal, essential unit tests using Vitest.
+- Test business logic and critical functions only
+- When connecting to API, tests for both normal and abnormal cases
+- Skip UI components and trivial code
+- Place `*.test.ts(x)` adjacent to source files
+- Enable aliases using `vite-tsconfig-paths`
 
 ## Decision Tree: Choosing Your Test Approach
 
@@ -19,19 +23,6 @@ User task → What needs testing?
 ```
 
 ## Vitest Unit Testing (Primary Approach)
-
-**Focus on:**
-
-- Critical business logic
-- Data transformations
-- Edge cases and error handling
-- Core component behavior
-
-**Skip:**
-
-- Trivial getters/setters
-- Third-party library wrappers
-- Styling/layout details
 
 ### Example: Minimal Essential Tests
 
@@ -55,7 +46,7 @@ describe("calculateTotal", () => {
 });
 ```
 
-### Component Testing
+### Component Testing(rarely needed)
 
 ```typescript
 // Button.test.tsx
@@ -127,11 +118,3 @@ pnpm run test:e2e
 - Third-party libraries (assume they work)
 - CSS/styling details
 - Trivial code (simple getters, obvious mappings)
-
-## Minimum Viable Test Coverage
-
-Focus on:
-
-1. **Critical paths** - Checkout, login, data submission
-2. **Error boundaries** - Invalid input, network failures
-3. **Business logic** - Calculations, validations, transformations

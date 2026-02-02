@@ -146,35 +146,6 @@ function useCreatePost() {
 - Usage examples (use tests instead)
 - Redundant descriptions
 
-## Testing Policy
-
-### Minimal Unit Tests Only
-
-- No E2E tests
-- Test business logic and critical functions only
-- When connecting to API, tests for both normal and abnormal cases
-- Skip UI components and trivial code
-- Place `*.test.ts(x)` adjacent to source files
-- Enable aliases using `vite-tsconfig-paths`
-
-### What to Test
-
-```typescript
-// ✅ Test: Business logic
-describe("calculateMetrics", () => {
-  it("should calculate correctly with valid data", () => {});
-  it("should handle edge cases", () => {});
-});
-
-// ✅ Test: API calls
-describe("fetchUser", () => {
-  it("should return user on success", async () => {});
-  it("should return error on failure", async () => {});
-});
-
-// ❌ Don't test: UI components, trivial functions
-```
-
 ### Commands
 
 ```bash
