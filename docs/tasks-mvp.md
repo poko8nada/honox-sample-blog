@@ -38,8 +38,8 @@
 
 ### Task 3: Markdown 変換ロジックの実装
 
-- [ ] `app/lib/markdown.ts` - gray-matter と unified を使用した変換処理の実装 (Result型を使用) **(FR-02)**
-- [ ] `app/lib/markdown.test.ts` - Frontmatter (YAML) パースとHTML変換のテスト
+- [x] `app/lib/markdown.ts` - gray-matter と unified を使用した変換処理の実装 (Result型を使用) **(FR-02)**
+- [x] `app/lib/markdown.test.ts` - Frontmatter (YAML) パースとHTML変換のテスト
 
 **依存関係**: なし
 **成果物**: MarkdownをHTMLとメタデータに変換する関数 (Result型を使用)
