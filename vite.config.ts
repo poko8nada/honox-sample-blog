@@ -12,5 +12,11 @@ export default defineConfig({
     }),
     tailwindcss(),
     build()
-  ]
+  ],
+  ssr: {
+    external: [
+      'debug',
+      'extend'
+      ],
+    },
 })

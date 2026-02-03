@@ -30,7 +30,8 @@ describe('r2 client utility', () => {
       if (isOk(result)) {
         expect(result.value).toBe(mockText)
       }
-      expect(mockBucket.get).toHaveBeenCalledWith('hello.md')
+      // Ensure the correct key is used with the 'posts/' prefix
+      expect(mockBucket.get).toHaveBeenCalledWith('posts/hello.md')
     })
 
     it('should return error when file does not exist', async () => {

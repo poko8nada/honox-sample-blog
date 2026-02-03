@@ -5,7 +5,7 @@ export async function getPost(
   slug: string,
 ): Promise<Result<string, string>> {
   try {
-    const object = await bucket.get(`${slug}.md`)
+    const object = await bucket.get(`posts/${slug}.md`)
     if (!object) return err(`Post not found: ${slug}`)
     const text = await object.text()
     return ok(text)
