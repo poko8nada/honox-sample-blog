@@ -93,6 +93,15 @@ MVPでは機能性を重視し、スタイリングは最小限（Minimal Stylin
   - Markdown内から参照される画像ファイルをR2から取得し、適切な `Content-Type` でレスポンスを返す。
 - **テスト観点**: 画像ファイルが正しいバイナリデータとして配信されるか。
 
+### 3.3. R2 ストレージ構造 (R2 Storage Structure)
+
+R2バケット内は以下のディレクトリ（プレフィックス）構造で管理する。
+
+- `posts/`: Markdownファイル（.md）を格納。
+  - 例: `posts/hello-world.md`
+- `images/`: 記事内で使用する画像ファイルを格納。
+  - 例: `images/hero-image.png`
+
 ---
 
 ## 4. 非機能要件 (Non-Functional Requirements)
@@ -111,6 +120,11 @@ MVPでは機能性を重視し、スタイリングは最小限（Minimal Stylin
 - Islands Architectureを活用し、必要最小限のJavaScriptのみをクライアントに送る。
 - Markdown変換はサーバーサイドで行う。
 
+**NFR-04: エラーハンドリング方針**
+
+- ビジネスロジックやデータ取得層（lib/）では、例外（try-catch）を直接呼び出し側に伝播させず、`Result<T, E>` 型（`app/utils/types.ts`）を使用してエラーを値として返す。
+- これにより、エラーハンドリングを型安全かつ明示的に行う。
+
 ---
 
 ## 5. ディレクトリ構成と作成ファイル (Directory Structure & Files)
@@ -128,9 +142,11 @@ honox-sample-blog/
 │  │  │  └─ assets/
 │  │  │     └─ [...path].ts      # FR-05: R2画像配信
 │  │  └─ _renderer.tsx           # 全体レイアウト
-│  ├─ lib/
+│  ├─ lib/                       # ビジネスロジック・ユーティリティ層（Result型を使用）
 │  │  ├─ r2.ts                   # FR-01: R2クライアント
 │  │  └─ markdown.ts             # FR-02: Markdown変換
+│  ├─ utils/                     # 汎用的な型定義やヘルパー
+│  │  └─ types.ts                # Result<T, E> 型の定義
 │  ├─ style.css                  # Tailwind CSS v4
 │  ├─ server.ts
 │  └─ client.ts

@@ -28,21 +28,21 @@
 
 ### Task 2: R2 クライアントユーティリティの実装
 
-- [ ] `app/lib/r2.ts` - オブジェクト取得・リスト取得関数の実装 **(FR-01)**
-- [ ] `app/lib/r2.test.ts` - 取得ロジックの単体テスト
+- [x] `app/lib/r2.ts` - オブジェクト取得・リスト取得関数の実装 (Result型を使用) **(FR-01)**
+- [x] `app/lib/r2.test.ts` - 取得ロジックの単体テスト
 
 **依存関係**: Task 1
-**成果物**: R2操作用の抽象化レイヤー
+**成果物**: R2操作用の抽象化レイヤー (Result型によるエラーハンドリング)
 **完了条件**: 指定したKeyでR2からデータが取得できること
 **テスト**: Vitestによる単体テスト
 
 ### Task 3: Markdown 変換ロジックの実装
 
-- [ ] `app/lib/markdown.ts` - gray-matter と unified を使用した変換処理の実装 **(FR-02)**
+- [ ] `app/lib/markdown.ts` - gray-matter と unified を使用した変換処理の実装 (Result型を使用) **(FR-02)**
 - [ ] `app/lib/markdown.test.ts` - Frontmatter (YAML) パースとHTML変換のテスト
 
 **依存関係**: なし
-**成果物**: MarkdownをHTMLとメタデータに変換する関数
+**成果物**: MarkdownをHTMLとメタデータに変換する関数 (Result型を使用)
 **完了条件**: gray-matterによりFrontmatterが抽出され、本文がHTMLとして出力されること
 **テスト**: Vitestによる単体テスト（主要なMarkdown記法の確認）
 
