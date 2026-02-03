@@ -477,7 +477,7 @@ export default createRoute(c => {
 Vite provides fast HMR during development:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Changes to components and routes are reflected instantly in browser.
@@ -486,13 +486,13 @@ Changes to components and routes are reflected instantly in browser.
 
 ```bash
 # Build both client and server
-npm run build
+pnpm run build
 
 # Preview production build
-npm run preview
+pnpm run preview
 
 # Deploy to Cloudflare Workers
-npm run deploy
+pnpm run deploy
 ```
 
 ## File Naming Conventions
