@@ -29,7 +29,7 @@ MVPでは機能性を重視し、スタイリングは最小限（Minimal Stylin
   - `remark-parse`: Markdown の解析
   - `remark-rehype`: Markdown (remark) から HTML (rehype) への変換
   - `rehype-stringify`: HTML の出力
-- **Frontmatterパース**: `gray-matter` (YAML, JSON, TOML 対応)
+- **Frontmatterパース**: `gray-matter-es` (ESM環境に対応したgray-matterのフォーク)
 - **スタイリング**: Tailwind CSS v4 + `@tailwindcss/typography` (記事本文の最小限の装飾)
 - **Lint/Formatter**: Biome
 - **パッケージマネージャ**: pnpm
@@ -65,7 +65,7 @@ MVPでは機能性を重視し、スタイリングは最小限（Minimal Stylin
 
 - **要件**: Markdown文字列をHTMLへ変換。
 - **詳細**:
-  - `gray-matter` を使用した Frontmatter (YAML) のパース。
+  - `gray-matter-es` を使用した Frontmatter (YAML) のパース。
   - `remark`/`rehype` を使用した本文のHTML変換。
   - 記事タイトル、公開日、タグ、説明文の抽出。
 - **テスト観点**: Markdownが期待通りのHTML構造に変換され、Frontmatterがオブジェクトとして正しく抽出されるか。
@@ -125,6 +125,12 @@ R2バケット内は以下のディレクトリ（プレフィックス）構造
 - ビジネスロジックやデータ取得層（lib/）では、例外（try-catch）を直接呼び出し側に伝播させず、`Result<T, E>` 型（`app/utils/types.ts`）を使用してエラーを値として返す。
 - これにより、エラーハンドリングを型安全かつ明示的に行う。
 
+**NFR-05: ESM/Edgeランタイム互換性**
+
+- Cloudflare Workers (Edgeランタイム) では Node.js の `require` が使用できないため、純粋な ESM パッケージを選択するか、Vite の `ssr.external` 設定で適切に処理する。
+- `gray-matter` のような CommonJS ライブラリは `gray-matter-es` などの ESM 対応版を使用し、必要に応じて Vite の `ssr.external` に依存関係を追加してエラーを回避する。
+- 詳細は [ESM/Edge Runtime 互換性トラブルシューティング](./troubleshooting-esm-compatibility.md) を参照。
+
 ---
 
 ## 5. ディレクトリ構成と作成ファイル (Directory Structure & Files)
@@ -171,3 +177,4 @@ honox-sample-blog/
 
 - [HonoX Documentation](https://github.com/honojs/honox)
 - [Cloudflare R2 Documentation](https://developers.cloudflare.com/r2/)
+- [ESM/Edge Runtime 互換性トラブルシューティング](./troubleshooting-esm-compatibility.md)

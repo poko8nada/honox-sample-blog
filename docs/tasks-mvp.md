@@ -5,7 +5,7 @@
 ### Task 0: 依存関係のセットアップ
 
 - [x] 必要なパッケージのインストール
-  - `pnpm add unified remark-parse remark-rehype rehype-stringify gray-matter`
+  - `pnpm add unified remark-parse remark-rehype rehype-stringify gray-matter-es`
   - `pnpm add -D @tailwindcss/typography vitest`
 - [x] `package.json` へのスクリプト追加
   - `"test": "vitest"`
@@ -38,7 +38,7 @@
 
 ### Task 3: Markdown 変換ロジックの実装
 
-- [x] `app/lib/markdown.ts` - gray-matter と unified を使用した変換処理の実装 (Result型を使用) **(FR-02)**
+- [x] `app/lib/markdown.ts` - gray-matter-es と unified を使用した変換処理の実装 (Result型を使用) **(FR-02)**
 - [x] `app/lib/markdown.test.ts` - Frontmatter (YAML) パースとHTML変換のテスト
 
 **依存関係**: なし
@@ -52,9 +52,9 @@
 
 ### Task 4: 記事一覧・詳細ページの実装
 
-- [ ] `app/routes/index.tsx` - 記事一覧表示の実装（機能優先、最小限のスタイリング） **(FR-03)**
-- [ ] `app/routes/posts/[slug].tsx` - 記事詳細表示の実装（機能優先、最小限のスタイリング） **(FR-04)**
-- [ ] `app/routes/_renderer.tsx` - 基本的なCSS/Layout設定（Tailwind Typography利用）
+- [x] `app/routes/index.tsx` - 記事一覧表示の実装（機能優先、最小限のスタイリング） **(FR-03)**
+- [x] `app/routes/posts/[slug].tsx` - 記事詳細表示の実装（機能優先、最小限のスタイリング） **(FR-04)**
+- [x] `app/routes/_renderer.tsx` - 基本的なCSS/Layout設定（Tailwind Typography利用）
 
 **依存関係**: Task 2, Task 3
 **成果物**: ブログの主要閲覧画面（機能重視の最小デザイン）
