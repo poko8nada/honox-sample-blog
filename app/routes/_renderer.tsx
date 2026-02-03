@@ -3,7 +3,7 @@ import { Link, Script } from 'honox/server'
 
 export default jsxRenderer(({ children }) => {
   return (
-    <html lang='en'>
+    <html lang='ja'>
       <head>
         <meta charset='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -11,7 +11,15 @@ export default jsxRenderer(({ children }) => {
         <Link href='/app/style.css' rel='stylesheet' />
         <Script src='/app/client.ts' async />
       </head>
-      <body>{children}</body>
+      <body class='prose'>
+        <header>
+          <h1>Honox Sample Blog</h1>
+        </header>
+        {children}
+        <footer>
+          <p>&copy; 2024 Honox Sample Blog</p>
+        </footer>
+      </body>
     </html>
   )
 })

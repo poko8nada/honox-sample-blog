@@ -11,7 +11,8 @@
       "routes/**",
       "biome.json",
       "package.json",
-      "wrangler.toml"
+      "wrangler.toml",
+      "!**/*.css"
     ]
   },
   "linter": {
