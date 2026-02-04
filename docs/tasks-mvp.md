@@ -63,7 +63,7 @@
 
 ### Task 5: 画像配信エンドポイントの実装
 
-- [ ] `app/routes/api/assets/[...path].ts` - 画像配信ロジック **(FR-05)**
+- [x] `app/routes/api/[...path].ts` - 画像配信ロジック **(FR-05)**
 
 **依存関係**: Task 2
 **成果物**: Markdown内で使用する画像をR2から配信するAPI

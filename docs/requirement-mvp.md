@@ -86,7 +86,7 @@ MVPでは機能性を重視し、スタイリングは最小限（Minimal Stylin
   - `slug` に対応する `.md` ファイルをR2から取得し、HTMLとしてレンダリングする。
 - **テスト観点**: 存在しないslugに対する404レスポンス。
 
-**FR-05: `app/routes/api/assets/[...path].ts`**
+**FR-05: app/routes/api/[...path].ts**
 
 - **要件**: R2内の画像ファイル配信。
 - **詳細**:
@@ -145,8 +145,7 @@ honox-sample-blog/
 │  │  ├─ posts/
 │  │  │  └─ [slug].tsx           # FR-04: 記事詳細
 │  │  ├─ api/
-│  │  │  └─ assets/
-│  │  │     └─ [...path].ts      # FR-05: R2画像配信
+│  │  │  └─ [...path].ts           # FR-05: R2画像配信
 │  │  └─ _renderer.tsx           # 全体レイアウト
 │  ├─ lib/                       # ビジネスロジック・ユーティリティ層（Result型を使用）
 │  │  ├─ r2.ts                   # FR-01: R2クライアント

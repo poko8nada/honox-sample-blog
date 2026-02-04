@@ -1,10 +1,19 @@
 ---
-title: ちょっとレトロな計算機「Tiny Calc」の開発：Cloud Run
-createdAt: 2026-01-28
-updatedAt: 2026-01-28
+title: Image Delivery Test2
+createdAt: 2026-03-20
+updatedAt: 2026-03-20
 version: 1
-thumbnail: /images/posts/pencil01.svg
+thumbnail: /api/images/test.png
 isPublished: true
 ---
 
-# Hello 3
+# Asset Delivery Test2
+
+This is a test post to verify that images are correctly delivered from R2 via the API endpoint.
+
+## Image from R2
+
+![Test Image](/api/assets/images/test.png)
+![Test Image](/api/images/test.png)
+
+If the image above is broken, the API endpoint or R2 configuration might have an issue.
