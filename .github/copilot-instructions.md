@@ -35,7 +35,7 @@
 1. List tasks, files and what to do specifically → **Get approval**
 2. Execute implementation
    - If bugs occur, loop this until resolved:
-     Confirm bug details and gather info → Present bug description and propose fixes → **Get approval** → Execute countermeasure → Verify resolution and explain → **Seek further instructions from user** → Return to confirm bug
+     Confirm bug details and gather info → Present bug description and propose fixes to user → **Get approval** → Execute countermeasure → Verify resolution and explain to user → **Seek further instructions from user** → Return to confirm bug
 
 3. Run tests
    - If fails, loop this until fixed:
@@ -51,7 +51,7 @@ When user input contains these keywords → **STOP & REQUEST APPROVAL**
 
 - commit, push, git add
 - create, modify, delete, fix, refactor
-- test, build, deploy
+- build, deploy
 
 ## Tools
 
