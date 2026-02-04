@@ -518,12 +518,18 @@ app/
 │  ├─ index.tsx                 # Home page
 │  ├─ posts/
 │  │  ├─ [id].tsx              # Dynamic post page
-│  │  └─ $post-like.tsx        # Island for likes
+│  │  └─ $post-like.tsx        # Island for inreactive component
 │  ├─ api/
 │  │  └─ hello.ts              # JSON endpoint
 │  ├─ _renderer.tsx            # Global layout
 │  ├─ _404.tsx                 # Not found
 │  └─ _error.tsx               # Error page
+├─ components/                  # Shared server components
+│  └─ header.tsx
+├─ utils/                       # Utilities
+│  └─ types.ts                 # Shared types
+├─ lib/                         # Shared libraries
+│  └─ fetcher.ts               # Data fetching utilities
 ├─ client.ts                    # Client entry
 ├─ server.ts                    # Server entry
 └─ global.d.ts                  # Type definitions
