@@ -32,10 +32,18 @@
 
 **For every request**: Silently evaluate which skill(s) would help most. Load matching SKILL.md file(s) into context if relevant.
 
-1. List tasks, files and what you do → **Get approval**
+1. List tasks, files and what to do specifically → **Get approval**
 2. Execute implementation
-3. Run tests → If fails, investigate and propose fixes → **Get approval** → Fix
-4. Prepare commit message → **Get approval** → Commit
+   - If bugs occur, loop this until resolved:
+     Confirm bug details and gather info → Present bug description and propose fixes → **Get approval** → Execute countermeasure → Verify resolution and explain → **Seek further instructions from user** → Return to confirm bug
+
+3. Run tests
+   - If fails, loop this until fixed:
+     Investigate and propose fixes → **Get approval** → Implement fixes → Rerun tests → Verify and explain → **Seek further instructions from user** → Return to investigate
+
+4. Update documentation if needed
+5. Lint and format code
+6. Prepare commit message → **Get approval** → Commit
 
 ## Trigger Keywords
 
