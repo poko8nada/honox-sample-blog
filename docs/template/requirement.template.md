@@ -140,34 +140,57 @@
 - 例: Next.js プロジェクトの場合
 
 ```
-project-name/
-├─ app/                             # Next.jsの場合
-│  ├─ layout.tsx                    # FR-XX: Root layout
-│  ├─ page.tsx                      # FR-XX: Top page
-│  ├─ globals.css
-│  ├─ _components/                  # Route-specific UI components
-│  │  ├─ ComponentA.tsx            # FR-XX: [機能説明]
-│  │  └─ ComponentB.tsx            # FR-XX: [機能説明]
-│  ├─ _features/                    # Route-specific features
-│  │  └─ FeatureName/              # Feature単位でコロケーション
-│  │     ├─ index.tsx              # FR-XX: Feature統合UI
-│  │     ├─ useFeatureLogic.ts     # FR-XX: Featureロジック
-│  │     └─ useFeatureLogic.test.ts
-│  └─ _hooks/                       # Route-specific hooks
-│     ├─ useHookA.ts               # FR-XX: [機能説明]
-│     └─ useHookA.test.ts
-│
-├─ utils/                            # Global utilities
-│  ├─ types.ts                      # Global types (Result<T, E>)
-│  ├─ utilityFunction.ts           # FR-XX: [機能説明]
-│  └─ utilityFunction.test.ts
-│
-├─ components/                       # Global shared UI
-│  └─ ui/                           # Atomic UI (shadcn/ui, etc.)
-│
-├─ hooks/                            # Global shared hooks
-└─ public/                           # Static assets
-    └─ [assets]
+app/
+├── dashboard/
+│   ├── @modal/              # Parallel route
+│   ├── @search/             # Parallel route
+│   ├── page.tsx             # Server component
+│   ├── loading.tsx          # Loading UI (auto-wrapped in Suspense)
+│   ├── error.tsx            # Error boundary
+│   ├── _components/         # Route-specific UI
+│   ├── _features/           # Route-specific logic
+│   ├── _hooks/              # Shared across route features
+│   ├── _actions/            # Route-specific server actions
+│   ├── _lib/                # Route-specific business logic
+│   │   ├── userLogic.ts
+│   │   └── userLogic.test.ts
+│   ├── _store/              # Route-specific Zustand stores
+│   │   └── dashboardStore.ts
+│   └── _config/             # Route-specific config
+├── blog/
+│   ├── [slug]/              # Dynamic route
+│   ├── page.tsx
+│   ├── loading.tsx
+│   ├── error.tsx
+│   ├── _components/
+│   ├── _features/
+│   ├── _hooks/
+│   ├── _actions/
+│   ├── _lib/
+│   └── _config/
+├── page.tsx                # Root page
+├── loading.tsx             # Root loading
+├── error.tsx               # Root error boundary
+└── layout.tsx              # Root layout
+
+components/                # Global shared UI
+├── ui/                     # Atomic UI pieces (shadcn/ui, primitives)
+├── layouts/                # Layout components (PageLayout, SectionLayout)
+└── ...                     # Custom global components
+
+hooks/                     # Global shared hooks
+lib/                       # Global business logic
+├── userActions.ts
+├── userActions.test.ts
+├── auth.ts
+└── api.ts
+store/                     # Global Zustand stores
+├── userStore.ts
+└── appStore.ts
+utils/                     # Pure utilities only (NOT business logic)
+├── format.ts              # Date formatting, string manipulation, etc.
+└── types.ts               # Global types only (e.g., Result<T,E>)
+public/                    # Static assets
 ```
 
 ---
