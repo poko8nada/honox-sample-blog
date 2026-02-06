@@ -1,7 +1,7 @@
 ---
 title: Image Delivery Test2
-createdAt: 2026-03-20
-updatedAt: 2026-03-20
+createdAt: 2026-03-21
+updatedAt: 2026-03-21
 version: 1
 thumbnail: /api/images/test.png
 isPublished: true
@@ -13,7 +13,6 @@ This is a test post to verify that images are correctly delivered from R2 via th
 
 ## Image from R2
 
-![Test Image](/api/assets/images/test.png)
 ![Test Image](/api/images/test.png)
 
 If the image above is broken, the API endpoint or R2 configuration might have an issue.

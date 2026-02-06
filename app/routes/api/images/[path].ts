@@ -1,13 +1,12 @@
 import { createRoute } from 'honox/factory'
-import { getAsset } from '../../lib/r2'
-import { isErr } from '../../utils/types'
+import { getAsset } from '../../../lib/r2'
+import { isErr } from '../../../utils/types'
 
 export default createRoute(async c => {
   let path = c.req.path
   const prefix = '/api/'
-
   if (path.startsWith(prefix)) {
-    path = path.replace(prefix, '')
+    path = path.slice(prefix.length)
   }
 
   if (!path) return c.notFound()

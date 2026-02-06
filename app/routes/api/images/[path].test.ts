@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 import { describe, expect, it, vi } from 'vitest'
-import route from './[...path]'
+import route from './[path]'
 
 // Create a simple mock for R2Bucket
 const createMockBucket = (overrides: Partial<R2Bucket> = {}): R2Bucket => {
