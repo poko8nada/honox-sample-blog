@@ -33,13 +33,20 @@ docs/
 ├── template/
 │   ├── requirement.template.md
 │   └── tasks-mvp.template.md
-├── requirement.md
+├── requirement-mvp.md
 ├── requirement-v1.md
 ├── requirement-v2.md
 ├── tasks-mvp.md
 ├── tasks-v1.md
 └── tasks-v2.md
 ```
+
+### Document Creation
+
+Regarding template items:
+
+- Do not make assumptions or delete items without permission.
+- If anything is unclear, always ask the user and have discussion.
 
 ## Technology Stack
 

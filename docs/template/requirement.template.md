@@ -1,4 +1,4 @@
-**This is a template. Fill in the [], duplicate or delete the template parts as needed.**
+**This is a template. Fill in the [] or ``, duplicate or delete the template parts as needed.**
 
 # [プロジェクト名] 要件定義書 (requirement.md)
 
@@ -39,6 +39,11 @@
   - `deploy`: [デプロイコマンド]
   - `test`: [テスト実行コマンド]
   - `lint`: [Lint/フォーマット実行コマンド]
+  - `format`: [コードフォーマット実行コマンド]
+  - `typecheck`: [型チェックコマンド（該当する場合）]
+  - `db:migrate`: [データベースマイグレーションコマンド（該当する場合）]
+  - `db:seed`: [データベースシードコマンド（該当する場合）]
+  - `generate`: [コード生成コマンド（該当する場合）]
 - **その他**: [その他、使用する主要ライブラリ・API]
 
 ### PRODUCT v1(製品版)
@@ -99,7 +104,7 @@
 **NFR-02: 互換性**
 
 - [ブラウザ・デバイス対応]
-- 例: Chrome 90+, Firefox 88+, Safari 14+
+- 例: Chrome latest, Firefox latest, Safari latest
 
 **NFR-03: アクセシビリティ**
 
@@ -132,6 +137,8 @@
 
 ### 5.1. フェーズ1: MVP実装時のディレクトリ構成
 
+- 例: Next.js プロジェクトの場合
+
 ```
 project-name/
 ├─ app/                             # Next.jsの場合
@@ -160,10 +167,8 @@ project-name/
 │
 ├─ hooks/                            # Global shared hooks
 └─ public/                           # Static assets
-   └─ [assets]
+    └─ [assets]
 ```
-
-**Note:** [プロジェクト構造とコンポーネントの構成については、`arch/` ディレクトリ内のプロジェクトアーキテクチャガイドを参照する。]
 
 ---
 
@@ -193,7 +198,7 @@ project-name/
 
 [ワイヤーフレーム・モックアップの挿入場所]
 
-**Note**: 画面フロー図、ワイヤーフレーム・モックアップは、簡易的なもので構わない。またFigmaやMiroなどの外部ツールで管理している場合、そのリンクを記載する。
+**Note**: It is enough to providee low-fidelity wireframes or figma links.
 
 ---
 
@@ -201,13 +206,16 @@ project-name/
 
 ### 8.1. カラーパレット (Color Palette)
 
-**カラーモード対応**
+**カラー対応**
 
-- ライトモード: [必須 / 不要]
-- ダークモード: [必須 / 不要 / オプション]
-- システム設定追従: [あり / なし]
+- カラーモード: [シングルカラー / デュアルカラー]
 
-**ライトモード**
+- デュアルカラーの場合:
+  - ライトモード: [必須 / 不要]
+  - ダークモード: [必須 / 不要 / オプション]
+  - システム設定追従: [あり / なし]
+
+**ライトモード** or **シングルカラー**
 
 _プライマリカラー_
 
@@ -233,7 +241,7 @@ _セマンティックカラー_
 - Error: `#EF4444` - [エラー、削除]
 - Info: `#3B82F6` - [情報、ヘルプ]
 
-**ダークモード**（該当する場合）
+**ダークモード** If applicable
 
 _プライマリカラー_
 
@@ -271,7 +279,7 @@ _セマンティックカラー_
 - `next-themes` などのライブラリでテーマ切り替え実装
 - システム設定追従の場合: `darkMode: 'media'` を使用
 
-**Note**: shadcn/ui などのコンポーネントライブラリを使用する場合、カラーのみカスタマイズし、タイポグラフィ・スペーシングは Tailwind / ライブラリのデフォルトを尊重する。
+**Note**: If use design system libraries like shadcn/ui, describe how to customize colors using their theming approach.
 
 ---
 

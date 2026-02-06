@@ -1,4 +1,4 @@
-**This is a template. Fill in the [], duplicate or delete the template parts as needed.**
+**This is a template. Fill in the [] or ``, duplicate or delete the template parts as needed.**
 
 # MVP実装タスク (tasks-mvp.md)
 
@@ -11,11 +11,15 @@
   - `pnpm add -D [開発用パッケージ名1] [開発用パッケージ名2] [...]`
 - [ ] `package.json` へのスクリプト追加
   - `"test": "[テスト実行コマンド]"`
-  - `"lint": "[Lint/フォーマット実行コマンド]"`
+  - `"lint": "[Lint/フォーマット実行コマンド]"`など
+- [ ] 開発環境の動作確認
+  - `pnpm dev` でエラーが出ないことを確認
+- [ ] 不要なファイル・コードの削除
+  - 初期テンプレートのサンプルコードなど
 
 **依存関係**: なし
 **成果物**: 開発に必要なライブラリとスクリプトが利用可能な状態
-**完了条件**: `package.json` にパッケージと `test`, `lint` スクリプトが追加されていること
+**完了条件**: [タスク完了を判断する基準]
 **テスト**: 不要
 
 ### Task 1
@@ -29,29 +33,15 @@
 **完了条件**: [タスク完了を判断する基準]
 **テスト**: [テスト方針 - 単体テスト必須/不要/手動確認]
 
-### Task 2
+**Note:** This is a task template. Duplicate or delete as needed.
 
-- [ ] `ファイルパス/ファイル名.tsx` - 機能説明 **(FR-XX)**
-- [ ] [その他の関連ファイル]
+### Task [No]
 
-**依存関係**: [なし / Task X, Task Y]
-**成果物**: [このタスクで達成される具体的な成果物]
-**完了条件**: [タスク完了を判断する基準]
-**テスト**: [テスト方針 - 単体テスト必須/不要/手動確認]
+### Phase [No]: [フェーズ名]
 
----
+### Task [No]
 
-## Phase 2: [フェーズ名]
-
-### Task 3
-
-- [ ] `ファイルパス/ファイル名.tsx` - 機能説明 **(FR-XX)**
-- [ ] [その他の関連ファイル]
-
-**依存関係**: [なし / Task X, Task Y]
-**成果物**: [このタスクで達成される具体的な成果物]
-**完了条件**: [タスク完了を判断する基準]
-**テスト**: [テスト方針 - 単体テスト必須/不要/手動確認]
+**Note:** This is a task template. Duplicate or delete as needed. Loop as needed for additional phases and tasks.
 
 ---
 
@@ -60,20 +50,19 @@
 ### Task [No]: ブラウザ互換性・パフォーマンス確認
 
 - [ ] ブラウザ互換性テスト（手動確認）
-  - Chrome 90+: 全機能動作確認
-  - Firefox 88+: 全機能動作確認
-  - Safari 14+: 全機能動作確認
+  - Chrome latest: 全機能動作確認
+  - Firefox latest: 全機能動作確認
+  - Safari latest: 全機能動作確認
 - [ ] パフォーマンス測定
   - [パフォーマンス要件1]
   - [パフォーマンス要件2]
 - [ ] アクセシビリティ監査（axe DevTools）
   - WCAG AA 基準クリア
 - [ ] 最小限の単体テスト実行
-  - `pnpm test:run` 結果確認
 
 **依存関係**: 機能実装完了
 **完了条件**: 全ブラウザで動作確認完了、最小限のテストがパス
-**注**: E2E テストは実施しない（copilot-instructions.md ポリシー準拠）
+**注**: E2E テストは実施しない
 
 ### Task [No]: デプロイ準備・本番環境確認
 
@@ -81,15 +70,15 @@
   - 環境変数設定（必要に応じて）
   - ビルド設定確認
 - [ ] OGP 画像作成・配置
-  - `/public/og.png` (1200x630px)
+  - `og.png` (1200x630px)
   - メタデータ設定
 - [ ] Favicon 準備・追加
-  - `/public/favicon.ico`
-  - `/app/icon.png` (該当する場合)
+  - `favicon.ico`
+  - `icon.png` (該当する場合)
 - [ ] 本番環境での動作確認
   - 全機能の動作確認
   - レスポンシブ表示確認
-- [ ] フェーズ2準備ドキュメント作成
+- [ ] 次段階への移行準備ドキュメント作成
   - [移行計画ドキュメント]
   - [設計書]
 
